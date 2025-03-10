@@ -248,7 +248,6 @@ jobs:
             ./SignOutput/rustdesk-*.exe
   publish_unsigned:
     needs:
-      - build-for-macOS
       - build-for-windows-flutter
     runs-on: ubuntu-latest
     if: ${{ inputs.upload-artifact }}
