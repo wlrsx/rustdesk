@@ -27,8 +27,8 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PRIVATE_REPO_PAT }}
           submodules: recursive
+          token: ${{ secrets.PRIVATE_REPO_PAT }}
 
       - name: Install prerequisites
         run: |
