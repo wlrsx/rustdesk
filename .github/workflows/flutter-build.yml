@@ -85,11 +85,13 @@ jobs:
           script: |
             core.exportVariable('ACTIONS_CACHE_URL', process.env.ACTIONS_CACHE_URL || '');
             core.exportVariable('ACTIONS_RUNTIME_TOKEN', process.env.ACTIONS_RUNTIME_TOKEN || '');
+
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       - name: Restore bridge files
         uses: actions/download-artifact@master
@@ -310,8 +312,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       - name: Install LLVM and Clang
         uses: rustdesk-org/install-llvm-action-32bit@master
@@ -441,8 +444,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       - name: Restore bridge files
         uses: actions/download-artifact@master
@@ -529,8 +533,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       - name: Install flutter
         uses: subosito/flutter-action@v2
@@ -638,8 +643,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       # $VCPKG_ROOT/vcpkg install --triplet arm64-ios --x-install-root="$VCPKG_ROOT/installed"
 
@@ -713,8 +719,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       - name: Import the codesign cert
         if: env.MACOS_P12_BASE64 != null
@@ -1009,8 +1016,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       - name: Install flutter
         uses: subosito/flutter-action@v2
@@ -1280,8 +1288,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       - name: Install flutter
         uses: subosito/flutter-action@v2
@@ -1444,8 +1453,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       - name: Set Swap Space
         if: ${{ matrix.job.arch == 'x86_64' }}
@@ -1774,8 +1784,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       - name: Free Space
         run: |
@@ -1967,8 +1978,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       - name: Download Binary
         uses: actions/download-artifact@master
@@ -2043,8 +2055,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       - name: Download Binary
         uses: actions/download-artifact@master
@@ -2103,8 +2116,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.PRIVATE_REPO_PAT }}
+          submodules: recursive
+
 
       - name: Prepare env
         run: |
